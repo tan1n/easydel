@@ -24,7 +24,7 @@ export default function CalculatePricing() {
                             </Form>
                         </Col>
                         <Col md={6} xs={0} className="hidden-xs hidden-sm">
-                            <img src="/images/delivery.png" className="img-fluid" height="160px" />
+                            <img src="/images/delivery.png" className="img-fluid" height="160px" alt="" />
                         </Col>
                     </Row>
                 </Container>
