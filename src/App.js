@@ -1,22 +1,39 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import About from './components/About';
-import Header from './components/Header';
-import Faq from './components/Faq';
-import Services from './components/Services';
-import Tracking from './components/Tracking';
-import CalculatePricing from './components/CalculatePricing';
+import Home from './Pages/Home';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+import Login from './Pages/Login';
+import Dashboard from './Pages/Dashboard';
+import PickupRequest from './Pages/PickupRequest';
+import PickupHistory from './Pages/PickupHistory';
+import ShopSettings from './Pages/ShopSettings';
 
 function App() {
   return (
-    <div className="mt-2" style={{ backgroundColor: "#f8f8f8" }}>
-      <Header />
-      <Tracking />
-      <Services />
-      <CalculatePricing />
-      <About />
-      <Faq />
-    </div>
-
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/login">
+          <Login />
+        </Route>
+        <Route path="/dashboard">
+          <Dashboard />
+        </Route>
+        <Route path="/pickup-request">
+          <PickupRequest />
+        </Route>
+        <Route path="/pickup-history">
+          <PickupHistory />
+        </Route>
+        <Route path="/shop-settings">
+          <ShopSettings />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
