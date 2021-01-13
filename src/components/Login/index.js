@@ -18,7 +18,7 @@ export function LoginFrom() {
             }}>
                 <Row>
                     <Col md={6} className='mb-5'>
-                        <img src="/images/easydel.png" className='img-fluid' />
+                        <img src="/images/easydel.png" className='img-fluid' alt="logo" />
                     </Col>
                     <Col md={6}>
                         <Form.Group>

@@ -1,9 +1,8 @@
-import React, { useMemo } from 'react'
+import React from 'react'
 import CustomTable from '.'
 
 export default function PickUpHistoryTable() {
-
-    const columns = useMemo(() => [
+    const columns = [
         { name: 'SN', sortable: true, selector: 'id' },
         { name: 'Recievers Name', selector: 'reciever.name' },
         { name: 'Delivery Address', selector: 'reciever.address' },
@@ -12,7 +11,7 @@ export default function PickUpHistoryTable() {
         { name: 'Amount', selector: 'total_amount' },
         { name: 'Tracking ID', selector: 'tracking_id' },
         { name: 'Status', selector: 'status' }
-    ])
+    ];
     return (
         <CustomTable
             title='Delivery history'

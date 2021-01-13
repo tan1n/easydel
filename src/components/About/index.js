@@ -1,5 +1,5 @@
 import React from 'react'
-import { Carousel, Col, Container, Row } from 'react-bootstrap'
+import { Carousel, Col, Row } from 'react-bootstrap'
 import Lorem from '../Lorem'
 
 export function About() {

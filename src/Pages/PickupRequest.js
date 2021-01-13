@@ -1,17 +1,13 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useState } from 'react'
-import { Container, Form, Row, Col, Button, ButtonGroup } from 'react-bootstrap'
-import { useHistory } from 'react-router-dom'
+import { Container, Form, Row, Col, Button } from 'react-bootstrap'
 import BackButton from '../components/BackButton'
-import { Header } from '../components/Header'
 import LoggedInHeader from '../components/LoggedInHeader'
 import ProductInfo from '../components/PickupRequest/ProductInfo'
 
 export default function PickupRequest() {
 
     const [productCount, setProductCount] = useState(1);
-
-    const history = useHistory();
 
     const renderProductList = () => {
         let productList = []

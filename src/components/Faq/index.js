@@ -1,5 +1,5 @@
 import React from 'react'
-import { Accordion, Button, Card, Col, Container, Row } from 'react-bootstrap'
+import { Accordion, Button, Card, Col, Row } from 'react-bootstrap'
 import Lorem from '../Lorem'
 
 export function Faq() {

@@ -1,6 +1,5 @@
 import React from 'react'
-import { Button, Container } from 'react-bootstrap'
-import { useHistory } from 'react-router-dom'
+import { Container } from 'react-bootstrap'
 import LoggedInHeader from '../components/LoggedInHeader'
 import BackButton from '../components/BackButton'
 import PickUpHistoryTable from '../components/CustomTable/PickUpHistoryTable'
