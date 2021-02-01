@@ -22,6 +22,14 @@ export default function PickupRequest() {
         fontWeight: 'bold'
     }
 
+    const [reciever, setReciver] = useState({ name: '', phone: '' });
+
+    const [address, setAddress] = useState({ city: '', location: '' });
+
+    const [products, setProducts] = useState([]);
+
+    const [delivery, setDelivery] = useState({ delivery_type: '' });
+
     return (
         <Container fluid >
             <Container className=''>
@@ -35,13 +43,13 @@ export default function PickupRequest() {
                         <Col md={6}>
                             <Form.Group>
                                 <label>Name</label>
-                                <Form.Control type='text' />
+                                <Form.Control type='text' onChange={e => setReciver(prev => ({ ...prev, name: e.target.value }))} />
                             </Form.Group>
                         </Col>
                         <Col md={6}>
                             <Form.Group>
                                 <label>Phone Number</label>
-                                <Form.Control type='text' placeholder='+8801-XXXXXXX' />
+                                <Form.Control type='text' placeholder='+8801-XXXXXXX' onChange={e => setReciver(prev => ({ ...prev, phone: e.target.value }))} />
                             </Form.Group>
                         </Col>
                     </Row>
@@ -49,7 +57,8 @@ export default function PickupRequest() {
                         <Col md={6}>
                             <Form.Group>
                                 <label>City</label>
-                                <Form.Control as='select' >
+                                <Form.Control as='select' onChange={e => setAddress(prev => ({ ...prev, city: e.target.value }))}>
+                                    <option>Select a city</option>
                                     <option>Chittagong</option>
                                     <option>Dhaka</option>
                                 </Form.Control>
@@ -58,7 +67,7 @@ export default function PickupRequest() {
                         <Col md={6}>
                             <Form.Group>
                                 <label>Full Address</label>
-                                <Form.Control as='textarea' rows={2} />
+                                <Form.Control as='textarea' rows={2} onChange={e => setAddress(prev => ({ ...prev, location: e.target.value }))} />
                             </Form.Group>
                         </Col>
                     </Row>
@@ -76,7 +85,7 @@ export default function PickupRequest() {
                         <Col md={6}>
                             <Form.Group>
                                 <label>Delivery Option</label>
-                                <Form.Control as='select'>
+                                <Form.Control as='select' onChange={e => setDelivery(prev => ({ ...prev, delivery_type: e.target.value }))}>
                                     <option>Select delivery method</option>
                                     <option>General</option>
                                     <option>Express</option>
@@ -87,7 +96,7 @@ export default function PickupRequest() {
                         <Col md={6}>
                             <Form.Group>
                                 <label>Total</label>
-                                <h3>1200$</h3>
+                                <h3></h3>
                             </Form.Group>
                         </Col>
                     </Row>
